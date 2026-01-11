@@ -7,7 +7,8 @@ export default function ProductCard({
     name,
     category,
     notes,
-    imageUrl
+    imageUrl,
+    onPress
 }) {
     return (
         <View style={styles.container}>
@@ -31,10 +32,14 @@ export default function ProductCard({
             <View >
                 {/* <Text style={styles.title}>{props.title}</Text> */}
                 {/* <Text style={{marginBottom: 10}}>{props.year}</Text> */}
-                <View>
+                <View style={{flexWrap: 'wrap', justifyContent: 'space-between'}}>
                     <Button 
                         title="Details"
-                        // onPress={() => props.onPress(props.id)}
+                        onPress={() => onPress(id)}
+                    />
+                    <Button 
+                        title="Use"
+                        
                     />
                 </View>
             </View>
@@ -56,7 +61,7 @@ const styles = {
     },
     name: {
         width: 200,
-        fontSize: 18,
+        fontSize: 16,
         fontWeight: 'normal',
         marginBottom: 5,
         flexWrap: 'wrap'
@@ -67,7 +72,7 @@ const styles = {
         color: '#a1a1a1'
     },
     notes: {
-        fontSize: 14, 
+        fontSize: 12, 
         color: '#4b4b4bdd',
         flexWrap: 'wrap',
         width: 200,

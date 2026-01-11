@@ -3,7 +3,8 @@ import ProductCard from './ProductCard';
 
 
 export default function ProductList({
-    products
+    products,
+    productPressHandler
 }) {
     return (
         <View style={styles.container}>
@@ -17,6 +18,7 @@ export default function ProductList({
                         category={product.category}
                         notes={product.notes}
                         imageUrl={product.imageUrl}
+                        onPress={productPressHandler}
                     />
                 )}
             </ScrollView>
