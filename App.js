@@ -10,11 +10,10 @@ export default function App() {
         <View style={styles.body}>
             <Text style={styles.heading}>Skin Care Journal</Text>
 
-            <ScrollView style={styles.container}>
+            <View style={styles.container}>
                 <ProductList products={data.products} />
-            </ScrollView>
-            
-                
+            </View>
+                 
         </View>
     );
 }
@@ -22,7 +21,8 @@ export default function App() {
 const styles = {
     body: {
         width: '100%',
-        backgroundColor: 'rgb(235, 223, 240)'
+        backgroundColor: 'rgb(235, 223, 240)',
+        marginBottom: 100,
     },
     heading: {
         paddingTop: 45,

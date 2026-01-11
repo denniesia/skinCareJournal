@@ -8,7 +8,7 @@ export default function ProductList({
     return (
         <View style={styles.container}>
             <Text style={styles.heading}>Products List</Text>
-            <View style={styles.productCard}>
+            <ScrollView style={styles.productCard}>
                 {products.map(product => 
                     <ProductCard 
                         key={product.id}
@@ -19,9 +19,8 @@ export default function ProductList({
                         imageUrl={product.imageUrl}
                     />
                 )}
-            </View>
+            </ScrollView>
         </View>
-        
 
         );
 };
@@ -31,7 +30,7 @@ const styles = {
     container: {
         justifyContent: 'center',
         alignItems: 'center',
-        marginBottom: 10,
+        marginBottom: 200,
        
     },
     heading: {
@@ -41,6 +40,7 @@ const styles = {
         marginBottom: 20,
     },
     productCard: {
-        flexWrap: 'wrap'
+        flexWrap: 'wrap',
+        marginBottom: 10,
     },
 }
