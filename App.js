@@ -1,12 +1,31 @@
 import { StatusBar } from 'expo-status-bar';
 import { Text, View } from 'react-native';
 
+import data from './data.json'
+import ProductList from './components/ProductList';
+
+
 export default function App() {
-  return (
-    <View >
-      <Text>Hello</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    return (
+        <View style={styles.body}>
+            <Text style={styles.heading}>Skin Care Journal</Text>
+            <StatusBar style="auto" />
+          
+            <ProductList products={data.products} />
+                
+        </View>
+    );
 }
 
+const styles = {
+    body: {
+        alignSelf: 'center',
+        // justifyContent: 'center',
+        // paddingTop: 0,
+        backgroundColor: 'rgb(235, 223, 240)'
+    },
+    heading: {
+        fontSize: 30,
+        fontWeight: 'bold'
+    }
+}
