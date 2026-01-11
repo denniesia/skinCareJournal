@@ -2,19 +2,22 @@ import { View, Text, Image, Button } from "react-native";
 
 
 export default function ProductCard({
-    name
+    key,
+    id,
+    name,
+    imageUrl
 }) {
     return (
         <View style={styles.container}>
             <View>
-                {/* <Image style={{borderRadius: 5}}
+                <Image style={{borderRadius: 5}}
                 source={{
-                    uri: props.imageUrl,
+                    uri: imageUrl,
                     width: 100,
                     height:148,
 
                 }}
-                /> */}
+                />
 
                 <Text>{name}</Text>
             </View>

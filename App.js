@@ -19,9 +19,7 @@ export default function App() {
 
 const styles = {
     body: {
-        alignSelf: 'center',
-        // justifyContent: 'center',
-        // paddingTop: 0,
+       
         backgroundColor: 'rgb(235, 223, 240)'
     },
     heading: {
