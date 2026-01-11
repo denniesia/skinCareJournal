@@ -6,9 +6,9 @@ export default function ProductList({
     products
 }) {
     return (
-        <View style={styles.body}>
+        <View style={styles.container}>
             <Text style={styles.heading}>Products List</Text>
-            <View style={{flexWrap: 'wrap'}}>
+            <View style={styles.productCard}>
                 {products.map(product => 
                     <ProductCard 
                         key={product.id}
@@ -28,10 +28,10 @@ export default function ProductList({
 
 
 const styles = {
-    body: {
+    container: {
         justifyContent: 'center',
         alignItems: 'center',
-        marginBottom: 20,
+        marginBottom: 10,
        
     },
     heading: {
@@ -40,7 +40,7 @@ const styles = {
         textAlign: 'center',
         marginBottom: 20,
     },
-    productCont: {
-  
+    productCard: {
+        flexWrap: 'wrap'
     },
 }

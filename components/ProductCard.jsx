@@ -3,7 +3,6 @@ import { View, Text, Image, Button } from "react-native";
 
 
 export default function ProductCard({
-    key,
     id,
     name,
     category,
@@ -16,8 +15,8 @@ export default function ProductCard({
                 <Image style={{borderRadius: 5}}
                     source={{
                         uri: imageUrl,
-                        width: 100,
-                        height:148,
+                        width:75,
+                        height:120,
 
                     }}
                 />
@@ -29,12 +28,10 @@ export default function ProductCard({
             
             </View>
 
-           
-
-            <View>
+            <View >
                 {/* <Text style={styles.title}>{props.title}</Text> */}
                 {/* <Text style={{marginBottom: 10}}>{props.year}</Text> */}
-                <View style={{width:100, paddingRight: 10}}>
+                <View>
                     <Button 
                         title="Details"
                         // onPress={() => props.onPress(props.id)}
@@ -51,16 +48,18 @@ const styles = {
         flexDirection: 'row',
         backgroundColor: '#fff', 
         justifyContent: 'space-between',
-        marginBottom: 20, 
-        marginHorizontal: 20, 
+        marginBottom: 10, 
         borderRadius: 10,
         alignItems: 'center',
-        gap: 5
+        gap: 5,
+        
     },
     name: {
+        width: 200,
         fontSize: 18,
         fontWeight: 'normal',
-        marginBottom: 4,
+        marginBottom: 5,
+        flexWrap: 'wrap'
     },
     category: {
         fontStyle: 'italic',
@@ -69,7 +68,9 @@ const styles = {
     },
     notes: {
         fontSize: 14, 
-        color: '#4b4b4bdd'
+        color: '#4b4b4bdd',
+        flexWrap: 'wrap',
+        width: 200,
     },
     btnDetails: {
 

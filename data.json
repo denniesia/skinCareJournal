@@ -100,6 +100,111 @@
           "routine": "PM"
         }
       ]
-    }
+    },
+    {
+    "id": "prod_006",
+    "name": "Vitamin C Suspension 23% + HA Spheres 2%",
+    "brand": "The Ordinary",
+    "category": "Serum",
+    "skinType": ["All"],
+    "imageUrl": "https://www.sephora.com/productimages/sku/s2342345-main-zoom.jpg",
+    "openedAt": "2025-01-06T10:00:00",
+    "expiresAfterMonths": 6,
+    "notes": "Brightens skin and targets uneven tone",
+    "usageLog": [
+      {
+        "usedAt": "2025-01-11T08:30:00",
+        "routine": "AM"
+      },
+      {
+        "usedAt": "2025-01-12T21:00:00",
+        "routine": "PM"
+      }
+    ]
+  },
+  {
+    "id": "prod_007",
+    "name": "Ultra Facial Cream",
+    "brand": "Kiehl's",
+    "category": "Moisturizer",
+    "skinType": ["Normal", "Dry", "Sensitive"],
+    "imageUrl": "https://www.sephora.com/productimages/sku/s123456-main-zoom.jpg",
+    "openedAt": "2025-01-07T09:15:00",
+    "expiresAfterMonths": 12,
+    "notes": "Lightweight moisturizer for daily hydration",
+    "usageLog": [
+      {
+        "usedAt": "2025-01-10T08:20:00",
+        "routine": "AM"
+      },
+      {
+        "usedAt": "2025-01-10T21:35:00",
+        "routine": "PM"
+      }
+    ]
+  },
+  {
+    "id": "prod_008",
+    "name": "Retinol 0.5% in Squalane",
+    "brand": "The Ordinary",
+    "category": "Treatment",
+    "skinType": ["All"],
+    "imageUrl": "https://www.sephora.com/productimages/sku/s543212-main-zoom.jpg",
+    "openedAt": "2025-01-08T20:00:00",
+    "expiresAfterMonths": 6,
+    "notes": "Use only at night, targets fine lines",
+    "usageLog": [
+      {
+        "usedAt": "2025-01-09T21:10:00",
+        "routine": "PM"
+      },
+      {
+        "usedAt": "2025-01-11T21:15:00",
+        "routine": "PM"
+      }
+    ]
+  },
+  {
+    "id": "prod_009",
+    "name": "Daily Gentle Exfoliating Cleanser",
+    "brand": "Paula's Choice",
+    "category": "Cleanser",
+    "skinType": ["Normal", "Combination", "Oily"],
+    "imageUrl": "https://www.sephora.com/productimages/sku/s678901-main-zoom.jpg",
+    "openedAt": "2025-01-05T08:45:00",
+    "expiresAfterMonths": 12,
+    "notes": "Mild exfoliating cleanser with salicylic acid",
+    "usageLog": [
+      {
+        "usedAt": "2025-01-10T08:10:00",
+        "routine": "AM"
+      },
+      {
+        "usedAt": "2025-01-10T21:30:00",
+        "routine": "PM"
+      }
+    ]
+  },
+  {
+    "id": "prod_010",
+    "name": "Hydrating Hyaluronic Acid Serum",
+    "brand": "Neutrogena",
+    "category": "Serum",
+    "skinType": ["All"],
+    "imageUrl": "https://www.sephora.com/productimages/sku/s987654-main-zoom.jpg",
+    "openedAt": "2025-01-06T14:00:00",
+    "expiresAfterMonths": 12,
+    "notes": "Boosts hydration and plumps skin",
+    "usageLog": [
+      {
+        "usedAt": "2025-01-11T08:25:00",
+        "routine": "AM"
+      },
+      {
+        "usedAt": "2025-01-11T21:45:00",
+        "routine": "PM"
+      }
+    ]
+  }
   ]
 }
