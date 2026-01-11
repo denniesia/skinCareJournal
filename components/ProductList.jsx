@@ -1,6 +1,5 @@
-import { Text, View } from 'react-native';
+import { Text, View, ScrollView } from 'react-native';
 import ProductCard from './ProductCard';
-import { ScrollView } from 'react-native';
 
 
 export default function ProductList({
@@ -9,16 +8,18 @@ export default function ProductList({
     return (
         <View style={styles.body}>
             <Text style={styles.heading}>Products List</Text>
-            <ScrollView>
+            <View style={{flexWrap: 'wrap'}}>
                 {products.map(product => 
                     <ProductCard 
                         key={product.id}
                         id={product.id}
                         name={product.name}
+                        category={product.category}
+                        notes={product.notes}
                         imageUrl={product.imageUrl}
                     />
                 )}
-            </ScrollView>
+            </View>
         </View>
         
 
@@ -28,10 +29,18 @@ export default function ProductList({
 
 const styles = {
     body: {
-
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 20,
+       
     },
     heading: {
         fontSize: 20,
-        fontWeight: 'medium'
-    }
+        fontWeight: 'medium',
+        textAlign: 'center',
+        marginBottom: 20,
+    },
+    productCont: {
+  
+    },
 }
