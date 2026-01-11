@@ -1,0 +1,100 @@
+{
+  "products": [
+    {
+      "id": "prod_001",
+      "name": "Hydrating Facial Cleanser",
+      "brand": "CeraVe",
+      "category": "Cleanser",
+      "skinType": ["Normal", "Dry"],
+      "openedAt": "2025-01-05T09:30:00",
+      "expiresAfterMonths": 12,
+      "notes": "Gentle, non-foaming cleanser",
+      "usageLog": [
+        {
+          "usedAt": "2025-01-10T08:15:00",
+          "routine": "AM"
+        },
+        {
+          "usedAt": "2025-01-10T21:40:00",
+          "routine": "PM"
+        }
+      ]
+    },
+    {
+      "id": "prod_002",
+      "name": "Niacinamide 10% + Zinc 1%",
+      "brand": "The Ordinary",
+      "category": "Serum",
+      "skinType": ["Oily", "Combination"],
+      "openedAt": "2025-01-08T14:00:00",
+      "expiresAfterMonths": 6,
+      "notes": "Helps with oil control and blemishes",
+      "usageLog": [
+        {
+          "usedAt": "2025-01-11T21:20:00",
+          "routine": "PM"
+        },
+        {
+          "usedAt": "2025-01-13T21:25:00",
+          "routine": "PM"
+        }
+      ]
+    },
+    {
+      "id": "prod_003",
+      "name": "Daily Moisturizing Lotion",
+      "brand": "CeraVe",
+      "category": "Moisturizer",
+      "skinType": ["Normal", "Dry", "Sensitive"],
+      "openedAt": "2025-01-06T10:10:00",
+      "expiresAfterMonths": 12,
+      "notes": "Contains ceramides and hyaluronic acid",
+      "usageLog": [
+        {
+          "usedAt": "2025-01-10T08:25:00",
+          "routine": "AM"
+        },
+        {
+          "usedAt": "2025-01-10T21:45:00",
+          "routine": "PM"
+        }
+      ]
+    },
+    {
+      "id": "prod_004",
+      "name": "Anthelios Invisible Fluid SPF 50+",
+      "brand": "La Roche-Posay",
+      "category": "Sunscreen",
+      "skinType": ["All"],
+      "openedAt": "2025-01-09T11:00:00",
+      "expiresAfterMonths": 12,
+      "notes": "Lightweight daily sunscreen",
+      "usageLog": [
+        {
+          "usedAt": "2025-01-12T08:40:00",
+          "routine": "AM"
+        },
+        {
+          "usedAt": "2025-01-13T08:35:00",
+          "routine": "AM"
+        }
+      ]
+    },
+    {
+      "id": "prod_005",
+      "name": "Glycolic Acid 7% Toning Solution",
+      "brand": "The Ordinary",
+      "category": "Toner",
+      "skinType": ["Normal", "Combination"],
+      "openedAt": "2025-01-07T19:00:00",
+      "expiresAfterMonths": 12,
+      "notes": "Use only at night, exfoliating toner",
+      "usageLog": [
+        {
+          "usedAt": "2025-01-11T22:10:00",
+          "routine": "PM"
+        }
+      ]
+    }
+  ]
+}
