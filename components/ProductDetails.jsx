@@ -1,14 +1,15 @@
 import { Button, View,Text, Image } from "react-native";
 
 import formatDate from '../utils/formatDate'
-
+import { useState } from "react";
+// import data from './data.json'
 
 export default function ProductDetails({
     product,
     onClose
 }) {
-
     let {
+        id,
         name,
         brand,
         imageUrl,
@@ -20,7 +21,15 @@ export default function ProductDetails({
         usageLog,
     } = product;
 
+    const [usedAt, setUsedAt] = useState();
+
     skinType = skinType.join(', ');
+
+    const markAsUsed = () => {
+        // const product = data.products.find(product => product.id === id);
+        // console.log(product)
+        
+    }
 
  return (
         <>
@@ -55,10 +64,10 @@ export default function ProductDetails({
                         Usage Log:
                     </Text>
                     <View style={styles.usageCont}>
-                        {usageLog.map((log, index) => (
+                        {usageLog.map((log) => (
                             <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
 
-                                <Text key={index} style={{fontSize: 14}}>
+                                <Text key={log.id} style={{fontSize: 14}}>
                                     {formatDate(log.usedAt)}
                                 </Text>
                                 <Button title="Delete"></Button>
@@ -69,7 +78,7 @@ export default function ProductDetails({
                 
                 <View style={styles.btnCont}>
                     <Button style={styles.btn} title="Go back" onPress={onClose} />
-                    <Button style={styles.btn} title="Use" />
+                    <Button style={styles.btn} title="Use" onPress={markAsUsed}/>
                 </View>
                 
             </View>

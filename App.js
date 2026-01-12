@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { ScrollView, Text, View } from 'react-native';
+import { ScrollView, Text, View, Button } from 'react-native';
 
 import data from './data.json'
 import ProductList from './components/ProductList';
@@ -23,7 +23,6 @@ export default function App() {
     return (
         <View style={styles.body}>
             <Text style={styles.heading}>Skin Care Journal</Text>
-
             <View style={styles.container}>
                 {
                     selectedProduct 
@@ -35,8 +34,6 @@ export default function App() {
                         productPressHandler={productPressHandler}
                     />
                 }
-
-                
             </View>
                  
         </View>
@@ -51,14 +48,14 @@ const styles = {
         marginBottom: 80,
     },
     heading: {
-        paddingTop: 45,
-        marginBottom: 20,
+        paddingTop: 60,
+        marginBottom: 10,
         fontSize: 30,
         fontWeight: 'bold',
         textAlign: 'center',
         marginTop: 10,
     },
     container: {
-       margin: 15,
+       margin: 5,
     }
 }

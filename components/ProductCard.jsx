@@ -30,8 +30,6 @@ export default function ProductCard({
             </View>
 
             <View >
-                {/* <Text style={styles.title}>{props.title}</Text> */}
-                {/* <Text style={{marginBottom: 10}}>{props.year}</Text> */}
                 <View style={{flexWrap: 'wrap', justifyContent: 'space-between'}}>
                     <Button 
                         title="Details"
