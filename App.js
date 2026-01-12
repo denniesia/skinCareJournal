@@ -48,7 +48,7 @@ const styles = {
         width: '100%',
         height: '100%',
         backgroundColor: 'rgb(235, 223, 240)',
-        marginBottom: 100,
+        marginBottom: 80,
     },
     heading: {
         paddingTop: 45,
