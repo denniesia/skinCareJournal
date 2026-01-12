@@ -8,6 +8,7 @@ import ProductDetails from './components/ProductDetails';
 
 
 export default function App() {
+    const [products, setProducts] = useState(data.products);
     const [selectedProduct, setSelectedProduct] = useState(null); 
 
 
@@ -20,6 +21,10 @@ export default function App() {
         setSelectedProduct(null);
     }
 
+    const deleteHandler = (productId) => {
+        setProducts(products => products.filter(product => product.id !== productId));
+    }
+
     return (
         <View style={styles.body}>
             <Text style={styles.heading}>Skin Care Journal</Text>
@@ -30,8 +35,9 @@ export default function App() {
                     <ProductDetails product={selectedProduct} onClose={closeDetailsHandler} />       
                         :
                     <ProductList 
-                        products={data.products}
+                        products={products}
                         productPressHandler={productPressHandler}
+                        onDelete={deleteHandler}
                     />
                 }
             </View>

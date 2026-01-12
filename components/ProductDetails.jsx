@@ -2,11 +2,12 @@ import { Button, View,Text, Image } from "react-native";
 
 import formatDate from '../utils/formatDate'
 import { useState } from "react";
-// import data from './data.json'
+import products from '../data.json'
 
 export default function ProductDetails({
     product,
-    onClose
+    onClose,
+    onDelete
 }) {
     let {
         id,
@@ -21,15 +22,30 @@ export default function ProductDetails({
         usageLog,
     } = product;
 
-    const [usedAt, setUsedAt] = useState();
+
+    // const [data, setData] = useState(products.products);
+
 
     skinType = skinType.join(', ');
 
-    const markAsUsed = () => {
-        // const product = data.products.find(product => product.id === id);
-        // console.log(product)
-        
-    }
+//     const markAsUsed = () => {
+//         setData(prevData =>
+//             prevData.map(productItem => {
+//                 if (productItem.id !== id) return productItem;
+
+//                 const lastEntryId = productItem.usageLog.at(-1)?.id || 0;
+//                 const newLog = {
+//                     usedAt: new Date().toISOString().slice(0, 19),
+//                     id: lastEntryId + 1
+//                 };
+
+//                 return {
+//                     ...productItem,
+//                     usageLog: [...productItem.usageLog, newLog]
+//                 };
+//             })
+//         );
+// };
 
  return (
         <>
@@ -65,9 +81,9 @@ export default function ProductDetails({
                     </Text>
                     <View style={styles.usageCont}>
                         {usageLog.map((log) => (
-                            <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+                            <View  key={log.id} style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
 
-                                <Text key={log.id} style={{fontSize: 14}}>
+                                <Text style={{fontSize: 14}}>
                                     {formatDate(log.usedAt)}
                                 </Text>
                                 <Button title="Delete"></Button>
@@ -78,7 +94,11 @@ export default function ProductDetails({
                 
                 <View style={styles.btnCont}>
                     <Button style={styles.btn} title="Go back" onPress={onClose} />
-                    <Button style={styles.btn} title="Use" onPress={markAsUsed}/>
+                    {/* <Button style={styles.btn} title="Use" onPress={markAsUsed}/> */}
+                    {/* <Button 
+                        title="Delete Product"
+                        onPress={() => onDelete(id) }
+                    /> */}
                 </View>
                 
             </View>

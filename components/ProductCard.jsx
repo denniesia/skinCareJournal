@@ -8,7 +8,8 @@ export default function ProductCard({
     category,
     notes,
     imageUrl,
-    onPress
+    onPress,
+    onDelete
 }) {
     return (
         <View style={styles.container}>
@@ -38,6 +39,10 @@ export default function ProductCard({
                     <Button 
                         title="Use"
                         
+                    />
+                    <Button 
+                        title="Delete"
+                        onPress={() => onDelete(id)}    
                     />
                 </View>
             </View>
