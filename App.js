@@ -12,6 +12,7 @@ export default function App() {
     const [selectedProduct, setSelectedProduct] = useState(null); 
 
 
+
     const productPressHandler = (productId) => {
         const product = data.products.find(product => product.id === productId )
         setSelectedProduct(product)
@@ -28,8 +29,6 @@ export default function App() {
     return (
         <SafeAreaProvider>
             <SafeAreaView>
-           
-           
                 <View style={styles.body}>
                     <Text style={styles.heading}>Skin Care Journal</Text>
                     <View style={styles.container}>
@@ -44,6 +43,8 @@ export default function App() {
                                 onDelete={deleteHandler}
                             />
                         }
+                      
+
                     </View>
                         
                 </View>
