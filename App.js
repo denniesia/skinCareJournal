@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { ScrollView, Text, View, Button } from 'react-native';
-
+import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import data from './data.json'
 import ProductList from './components/ProductList';
 import { useState } from 'react';
@@ -26,23 +26,29 @@ export default function App() {
     }
 
     return (
-        <View style={styles.body}>
-            <Text style={styles.heading}>Skin Care Journal</Text>
-            <View style={styles.container}>
-                {
-                    selectedProduct 
-                        ? 
-                    <ProductDetails product={selectedProduct} onClose={closeDetailsHandler} />       
-                        :
-                    <ProductList 
-                        products={products}
-                        productPressHandler={productPressHandler}
-                        onDelete={deleteHandler}
-                    />
-                }
-            </View>
-                 
-        </View>
+        <SafeAreaProvider>
+            <SafeAreaView>
+           
+           
+                <View style={styles.body}>
+                    <Text style={styles.heading}>Skin Care Journal</Text>
+                    <View style={styles.container}>
+                        {
+                            selectedProduct 
+                                ? 
+                            <ProductDetails product={selectedProduct} onClose={closeDetailsHandler} />       
+                                :
+                            <ProductList 
+                                products={products}
+                                productPressHandler={productPressHandler}
+                                onDelete={deleteHandler}
+                            />
+                        }
+                    </View>
+                        
+                </View>
+            </SafeAreaView>         
+        </SafeAreaProvider>
     );
 }
 
@@ -54,7 +60,7 @@ const styles = {
         marginBottom: 80,
     },
     heading: {
-        paddingTop: 60,
+        paddingTop: 10,
         marginBottom: 10,
         fontSize: 30,
         fontWeight: 'bold',
